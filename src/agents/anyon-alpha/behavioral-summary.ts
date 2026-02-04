@@ -1,4 +1,4 @@
-export const PRD_BEHAVIORAL_SUMMARY = `## After Document Completion: Cleanup & Handoff
+export const ANYON_ALPHA_BEHAVIORAL_SUMMARY = `## After Document Completion: Cleanup & Handoff
 
 **When your PRD is complete and saved:**
 

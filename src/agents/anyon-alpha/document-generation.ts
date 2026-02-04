@@ -1,4 +1,4 @@
-export const PRD_DOCUMENT_GENERATION = `# PHASE 2: DOCUMENT GENERATION (Auto-Transition)
+export const ANYON_ALPHA_DOCUMENT_GENERATION = `# PHASE 2: DOCUMENT GENERATION (Auto-Transition)
 
 ## Trigger Conditions
 

@@ -31,9 +31,9 @@ import { migrateAgentConfig } from "../shared/permission-compat";
 import { AGENT_NAME_MAP } from "../shared/migration";
 import { AGENT_MODEL_REQUIREMENTS } from "../shared/model-requirements";
 import { PROMETHEUS_SYSTEM_PROMPT, PROMETHEUS_PERMISSION } from "../agents/prometheus";
-import { PRD_SYSTEM_PROMPT, PRD_PERMISSION } from "../agents/prd";
-import { USERFLOW_SYSTEM_PROMPT, USERFLOW_PERMISSION } from "../agents/userflow";
-import { ERD_SYSTEM_PROMPT, ERD_PERMISSION } from "../agents/erd";
+import { ANYON_ALPHA_SYSTEM_PROMPT, ANYON_ALPHA_PERMISSION } from "../agents/anyon-alpha";
+import { ANYON_BETA_SYSTEM_PROMPT, ANYON_BETA_PERMISSION } from "../agents/anyon-beta";
+import { ANYON_GAMMA_SYSTEM_PROMPT, ANYON_GAMMA_PERMISSION } from "../agents/anyon-gamma";
 import { DEFAULT_CATEGORIES } from "../tools/delegate-task/constants";
 import type { ModelCacheState } from "../plugin-state";
 import type { CategoryConfig } from "../config/schema";
@@ -51,7 +51,7 @@ export function resolveCategoryConfig(
   return userCategories?.[categoryName] ?? DEFAULT_CATEGORIES[categoryName];
 }
 
-const CORE_AGENT_ORDER = ["sisyphus", "hephaestus", "prometheus", "atlas", "prd", "userflow", "erd"] as const;
+const CORE_AGENT_ORDER = ["sisyphus", "hephaestus", "prometheus", "atlas", "anyon-alpha", "anyon-beta", "anyon-gamma"] as const;
 
 function reorderAgentsByPriority(agents: Record<string, unknown>): Record<string, unknown> {
   const ordered: Record<string, unknown> = {};
@@ -339,30 +339,30 @@ export function createConfigHandler(deps: ConfigHandlerDeps) {
         }
       }
 
-      agentConfig["prd"] = {
-        name: "prd",
+      agentConfig["anyon-alpha"] = {
+        name: "anyon-alpha",
         mode: "all" as const,
-        prompt: PRD_SYSTEM_PROMPT,
-        permission: PRD_PERMISSION,
-        description: "PRD Agent (Anyon - OhMyOpenCode)",
+        prompt: ANYON_ALPHA_SYSTEM_PROMPT,
+        permission: ANYON_ALPHA_PERMISSION,
+        description: "Anyon Alpha - PRD Agent (Anyon - OhMyOpenCode)",
         color: "#2196F3",
       }
 
-      agentConfig["userflow"] = {
-        name: "userflow",
+      agentConfig["anyon-beta"] = {
+        name: "anyon-beta",
         mode: "all" as const,
-        prompt: USERFLOW_SYSTEM_PROMPT,
-        permission: USERFLOW_PERMISSION,
-        description: "UserFlow Agent (Anyon - OhMyOpenCode)",
+        prompt: ANYON_BETA_SYSTEM_PROMPT,
+        permission: ANYON_BETA_PERMISSION,
+        description: "Anyon Beta - UserFlow Agent (Anyon - OhMyOpenCode)",
         color: "#4CAF50",
       }
 
-      agentConfig["erd"] = {
-        name: "erd",
+      agentConfig["anyon-gamma"] = {
+        name: "anyon-gamma",
         mode: "all" as const,
-        prompt: ERD_SYSTEM_PROMPT,
-        permission: ERD_PERMISSION,
-        description: "ERD Agent (Anyon - OhMyOpenCode)",
+        prompt: ANYON_GAMMA_SYSTEM_PROMPT,
+        permission: ANYON_GAMMA_PERMISSION,
+        description: "Anyon Gamma - ERD Agent (Anyon - OhMyOpenCode)",
         color: "#9C27B0",
       }
 
@@ -467,16 +467,16 @@ export function createConfigHandler(deps: ConfigHandlerDeps) {
       const agent = agentResult["sisyphus-junior"] as AgentWithPermission;
       agent.permission = { ...agent.permission, delegate_task: "allow", "task_*": "allow", teammate: "allow" };
     }
-    if (agentResult["prd"]) {
-      const agent = agentResult["prd"] as AgentWithPermission;
+    if (agentResult["anyon-alpha"]) {
+      const agent = agentResult["anyon-alpha"] as AgentWithPermission;
       agent.permission = { ...agent.permission, call_omo_agent: "deny", delegate_task: "allow", question: questionPermission, "task_*": "allow", teammate: "allow", websearch: "deny", google_search: "deny" };
     }
-    if (agentResult["userflow"]) {
-      const agent = agentResult["userflow"] as AgentWithPermission;
+    if (agentResult["anyon-beta"]) {
+      const agent = agentResult["anyon-beta"] as AgentWithPermission;
       agent.permission = { ...agent.permission, call_omo_agent: "deny", delegate_task: "allow", question: questionPermission, "task_*": "allow", teammate: "allow", websearch: "deny", google_search: "deny" };
     }
-    if (agentResult["erd"]) {
-      const agent = agentResult["erd"] as AgentWithPermission;
+    if (agentResult["anyon-gamma"]) {
+      const agent = agentResult["anyon-gamma"] as AgentWithPermission;
       agent.permission = { ...agent.permission, call_omo_agent: "deny", delegate_task: "allow", question: questionPermission, "task_*": "allow", teammate: "allow", websearch: "deny", google_search: "deny" };
     }
 

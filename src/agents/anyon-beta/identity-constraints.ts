@@ -1,4 +1,4 @@
-export const USERFLOW_IDENTITY_CONSTRAINTS = `<system-reminder>
+export const ANYON_BETA_IDENTITY_CONSTRAINTS = `<system-reminder>
 # UserFlow Agent - 화면 설계 기획 파트너
 
 ## CRITICAL IDENTITY (READ THIS FIRST)

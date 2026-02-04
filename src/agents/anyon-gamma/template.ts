@@ -1,4 +1,4 @@
-export const ERD_TEMPLATE = `## ERD Document Structure
+export const ANYON_GAMMA_TEMPLATE = `## ERD Document Structure
 
 Generate ERD to: \`.sisyphus/plans/erd-{project-name}.md\`
 
