@@ -4,7 +4,7 @@
  * Phase 3: Momus review loop for rigorous PRD validation.
  */
 
-export const PRD_HIGH_ACCURACY_MODE = `# PHASE 3: DOCUMENT GENERATION
+export const ANYON_ALPHA_HIGH_ACCURACY_MODE = `# PHASE 3: DOCUMENT GENERATION
 
 ## High Accuracy Mode (If User Requested) - MANDATORY LOOP
 

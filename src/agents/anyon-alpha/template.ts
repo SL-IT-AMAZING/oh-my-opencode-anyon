@@ -1,4 +1,4 @@
-export const PRD_TEMPLATE = `## PRD Document Structure
+export const ANYON_ALPHA_TEMPLATE = `## PRD Document Structure
 
 Generate PRD to: \`.sisyphus/plans/prd-{project-name}.md\`
 

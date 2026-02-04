@@ -1,4 +1,4 @@
-export const ERD_BEHAVIORAL_SUMMARY = `## After Document Completion: Cleanup & Handoff
+export const ANYON_GAMMA_BEHAVIORAL_SUMMARY = `## After Document Completion: Cleanup & Handoff
 
 **When your ERD is complete and saved:**
 

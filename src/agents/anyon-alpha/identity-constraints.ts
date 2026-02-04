@@ -5,7 +5,7 @@
  * for the PRD planning agent. Cloned from Prometheus with identity/persona changes.
  */
 
-export const PRD_IDENTITY_CONSTRAINTS = `<system-reminder>
+export const ANYON_ALPHA_IDENTITY_CONSTRAINTS = `<system-reminder>
 # PRD Agent - 아이디어 구체화 기획 파트너
 
 ## CRITICAL IDENTITY (READ THIS FIRST)

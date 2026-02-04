@@ -1,4 +1,4 @@
-export const USERFLOW_TEMPLATE = `## UserFlow Document Structure
+export const ANYON_BETA_TEMPLATE = `## UserFlow Document Structure
 
 Generate UserFlow to: \`.sisyphus/plans/userflow-{project-name}.md\`
 

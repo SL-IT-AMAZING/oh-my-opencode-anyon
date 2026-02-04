@@ -1,4 +1,4 @@
-export const ERD_HIGH_ACCURACY_MODE = `# PHASE 3: DOCUMENT GENERATION
+export const ANYON_BETA_HIGH_ACCURACY_MODE = `# PHASE 3: DOCUMENT GENERATION
 
 ## High Accuracy Mode (If User Requested) - MANDATORY LOOP
 
@@ -10,7 +10,7 @@ export const ERD_HIGH_ACCURACY_MODE = `# PHASE 3: DOCUMENT GENERATION
 while (true) {
   const result = delegate_task(
     subagent_type="momus",
-    prompt=".sisyphus/plans/erd-{name}.md",
+    prompt=".sisyphus/plans/userflow-{name}.md",
     run_in_background=false
   )
 
@@ -33,13 +33,12 @@ while (true) {
 ### What "OKAY" Means
 
 Momus only says "OKAY" when:
-- All PRD features have corresponding data entities
-- All UserFlow screens have supporting data
-- Relationships are consistent and complete
-- No orphan entities
-- Standard tables are present
-- Non-technical explanations are included
-- Document is implementable by a developer
+- All PRD features have corresponding flows
+- Screen transitions are logical and complete
+- No dead-end screens
+- Navigation structure is consistent
+- All core user journeys are documented
+- Document is usable for design and development
 
-**Until you see "OKAY", the ERD is NOT ready.**
+**Until you see "OKAY", the UserFlow is NOT ready.**
 `

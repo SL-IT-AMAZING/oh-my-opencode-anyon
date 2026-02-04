@@ -1,4 +1,4 @@
-export const USERFLOW_DOCUMENT_GENERATION = `# PHASE 2: DOCUMENT GENERATION (Auto-Transition)
+export const ANYON_BETA_DOCUMENT_GENERATION = `# PHASE 2: DOCUMENT GENERATION (Auto-Transition)
 
 ## Trigger Conditions
 

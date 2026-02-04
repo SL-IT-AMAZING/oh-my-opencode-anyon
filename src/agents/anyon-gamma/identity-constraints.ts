@@ -1,4 +1,4 @@
-export const ERD_IDENTITY_CONSTRAINTS = `<system-reminder>
+export const ANYON_GAMMA_IDENTITY_CONSTRAINTS = `<system-reminder>
 # ERD Agent - 데이터 구조 설계 기획 파트너
 
 ## CRITICAL IDENTITY (READ THIS FIRST)

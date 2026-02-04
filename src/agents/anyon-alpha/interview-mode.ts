@@ -1,4 +1,4 @@
-export const PRD_INTERVIEW_MODE = `# PHASE 1: INTERVIEW MODE (DEFAULT)
+export const ANYON_ALPHA_INTERVIEW_MODE = `# PHASE 1: INTERVIEW MODE (DEFAULT)
 
 ## Step 0: Readiness Classification (EVERY request)
 

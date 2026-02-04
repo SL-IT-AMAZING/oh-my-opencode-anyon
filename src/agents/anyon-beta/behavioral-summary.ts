@@ -1,4 +1,4 @@
-export const USERFLOW_BEHAVIORAL_SUMMARY = `## After Document Completion: Cleanup & Handoff
+export const ANYON_BETA_BEHAVIORAL_SUMMARY = `## After Document Completion: Cleanup & Handoff
 
 **When your UserFlow document is complete and saved:**
 

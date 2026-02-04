@@ -23,16 +23,16 @@ export {
 } from "./prometheus"
 
 export {
-  PRD_SYSTEM_PROMPT,
-  PRD_PERMISSION,
-} from "./prd"
+  ANYON_ALPHA_SYSTEM_PROMPT,
+  ANYON_ALPHA_PERMISSION,
+} from "./anyon-alpha"
 
 export {
-  USERFLOW_SYSTEM_PROMPT,
-  USERFLOW_PERMISSION,
-} from "./userflow"
+  ANYON_BETA_SYSTEM_PROMPT,
+  ANYON_BETA_PERMISSION,
+} from "./anyon-beta"
 
 export {
-  ERD_SYSTEM_PROMPT,
-  ERD_PERMISSION,
-} from "./erd"
+  ANYON_GAMMA_SYSTEM_PROMPT,
+  ANYON_GAMMA_PERMISSION,
+} from "./anyon-gamma"
