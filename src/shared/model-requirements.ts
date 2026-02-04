@@ -94,6 +94,27 @@ export const AGENT_MODEL_REQUIREMENTS: Record<string, ModelRequirement> = {
       { providers: ["google", "github-copilot", "opencode"], model: "gemini-3-pro" },
     ],
   },
+  "anyon-alpha": {
+    fallbackChain: [
+      { providers: ["anthropic", "github-copilot", "opencode"], model: "claude-opus-4-5", variant: "max" },
+      { providers: ["openai", "github-copilot", "opencode"], model: "gpt-5.2", variant: "high" },
+      { providers: ["google", "github-copilot", "opencode"], model: "gemini-3-pro" },
+    ],
+  },
+  "anyon-beta": {
+    fallbackChain: [
+      { providers: ["anthropic", "github-copilot", "opencode"], model: "claude-opus-4-5", variant: "max" },
+      { providers: ["openai", "github-copilot", "opencode"], model: "gpt-5.2", variant: "high" },
+      { providers: ["google", "github-copilot", "opencode"], model: "gemini-3-pro" },
+    ],
+  },
+  "anyon-gamma": {
+    fallbackChain: [
+      { providers: ["anthropic", "github-copilot", "opencode"], model: "claude-opus-4-5", variant: "max" },
+      { providers: ["openai", "github-copilot", "opencode"], model: "gpt-5.2", variant: "high" },
+      { providers: ["google", "github-copilot", "opencode"], model: "gemini-3-pro" },
+    ],
+  },
 }
 
 export const CATEGORY_MODEL_REQUIREMENTS: Record<string, ModelRequirement> = {
