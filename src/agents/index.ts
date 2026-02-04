@@ -23,16 +23,22 @@ export {
 } from "./prometheus"
 
 export {
+  createAnyonAlphaAgent,
   ANYON_ALPHA_SYSTEM_PROMPT,
   ANYON_ALPHA_PERMISSION,
+  ANYON_ALPHA_PROMPT_METADATA,
 } from "./anyon-alpha"
 
 export {
+  createAnyonBetaAgent,
   ANYON_BETA_SYSTEM_PROMPT,
   ANYON_BETA_PERMISSION,
+  ANYON_BETA_PROMPT_METADATA,
 } from "./anyon-beta"
 
 export {
+  createAnyonGammaAgent,
   ANYON_GAMMA_SYSTEM_PROMPT,
   ANYON_GAMMA_PERMISSION,
+  ANYON_GAMMA_PROMPT_METADATA,
 } from "./anyon-gamma"

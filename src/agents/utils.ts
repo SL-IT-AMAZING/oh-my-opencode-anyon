@@ -10,6 +10,9 @@ import { createMetisAgent, metisPromptMetadata } from "./metis"
 import { createAtlasAgent, atlasPromptMetadata } from "./atlas"
 import { createMomusAgent, momusPromptMetadata } from "./momus"
 import { createHephaestusAgent } from "./hephaestus"
+import { createAnyonAlphaAgent, ANYON_ALPHA_PROMPT_METADATA } from "./anyon-alpha"
+import { createAnyonBetaAgent, ANYON_BETA_PROMPT_METADATA } from "./anyon-beta"
+import { createAnyonGammaAgent, ANYON_GAMMA_PROMPT_METADATA } from "./anyon-gamma"
 import type { AvailableAgent, AvailableCategory, AvailableSkill } from "./dynamic-agent-prompt-builder"
 import { deepMerge, fetchAvailableModels, resolveModelPipeline, AGENT_MODEL_REQUIREMENTS, readConnectedProvidersCache, isModelAvailable, isAnyFallbackModelAvailable, migrateAgentConfig } from "../shared"
 import { DEFAULT_CATEGORIES, CATEGORY_DESCRIPTIONS } from "../tools/delegate-task/constants"
@@ -32,6 +35,9 @@ const agentSources: Record<BuiltinAgentName, AgentSource> = {
   // Note: Atlas is handled specially in createBuiltinAgents()
   // because it needs OrchestratorContext, not just a model string
   atlas: createAtlasAgent as unknown as AgentFactory,
+  "anyon-alpha": createAnyonAlphaAgent,
+  "anyon-beta": createAnyonBetaAgent,
+  "anyon-gamma": createAnyonGammaAgent,
 }
 
 /**
@@ -46,6 +52,9 @@ const agentMetadata: Partial<Record<BuiltinAgentName, AgentPromptMetadata>> = {
   metis: metisPromptMetadata,
   momus: momusPromptMetadata,
   atlas: atlasPromptMetadata,
+  "anyon-alpha": ANYON_ALPHA_PROMPT_METADATA,
+  "anyon-beta": ANYON_BETA_PROMPT_METADATA,
+  "anyon-gamma": ANYON_GAMMA_PROMPT_METADATA,
 }
 
 function isFactory(source: AgentSource): source is AgentFactory {

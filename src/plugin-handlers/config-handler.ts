@@ -31,9 +31,7 @@ import { migrateAgentConfig } from "../shared/permission-compat";
 import { AGENT_NAME_MAP } from "../shared/migration";
 import { AGENT_MODEL_REQUIREMENTS } from "../shared/model-requirements";
 import { PROMETHEUS_SYSTEM_PROMPT, PROMETHEUS_PERMISSION } from "../agents/prometheus";
-import { ANYON_ALPHA_SYSTEM_PROMPT, ANYON_ALPHA_PERMISSION } from "../agents/anyon-alpha";
-import { ANYON_BETA_SYSTEM_PROMPT, ANYON_BETA_PERMISSION } from "../agents/anyon-beta";
-import { ANYON_GAMMA_SYSTEM_PROMPT, ANYON_GAMMA_PERMISSION } from "../agents/anyon-gamma";
+
 import { DEFAULT_CATEGORIES } from "../tools/delegate-task/constants";
 import type { ModelCacheState } from "../plugin-state";
 import type { CategoryConfig } from "../config/schema";
@@ -337,33 +335,6 @@ export function createConfigHandler(deps: ConfigHandlerDeps) {
         } else {
           agentConfig["prometheus"] = prometheusBase;
         }
-      }
-
-      agentConfig["anyon-alpha"] = {
-        name: "anyon-alpha",
-        mode: "all" as const,
-        prompt: ANYON_ALPHA_SYSTEM_PROMPT,
-        permission: ANYON_ALPHA_PERMISSION,
-        description: "Anyon Alpha - PRD Agent (Anyon - OhMyOpenCode)",
-        color: "#2196F3",
-      }
-
-      agentConfig["anyon-beta"] = {
-        name: "anyon-beta",
-        mode: "all" as const,
-        prompt: ANYON_BETA_SYSTEM_PROMPT,
-        permission: ANYON_BETA_PERMISSION,
-        description: "Anyon Beta - UserFlow Agent (Anyon - OhMyOpenCode)",
-        color: "#4CAF50",
-      }
-
-      agentConfig["anyon-gamma"] = {
-        name: "anyon-gamma",
-        mode: "all" as const,
-        prompt: ANYON_GAMMA_SYSTEM_PROMPT,
-        permission: ANYON_GAMMA_PERMISSION,
-        description: "Anyon Gamma - ERD Agent (Anyon - OhMyOpenCode)",
-        color: "#9C27B0",
       }
 
     const filteredConfigAgents = configAgent

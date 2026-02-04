@@ -27,6 +27,9 @@ export const BuiltinAgentNameSchema = z.enum([
   "metis",
   "momus",
   "atlas",
+  "anyon-alpha",
+  "anyon-beta",
+  "anyon-gamma",
 ])
 
 export const BuiltinSkillNameSchema = z.enum([
@@ -51,6 +54,9 @@ export const OverridableAgentNameSchema = z.enum([
   "explore",
   "multimodal-looker",
   "atlas",
+  "anyon-alpha",
+  "anyon-beta",
+  "anyon-gamma",
 ])
 
 export const AgentNameSchema = BuiltinAgentNameSchema
@@ -152,6 +158,9 @@ export const AgentOverridesSchema = z.object({
   explore: AgentOverrideConfigSchema.optional(),
   "multimodal-looker": AgentOverrideConfigSchema.optional(),
   atlas: AgentOverrideConfigSchema.optional(),
+  "anyon-alpha": AgentOverrideConfigSchema.optional(),
+  "anyon-beta": AgentOverrideConfigSchema.optional(),
+  "anyon-gamma": AgentOverrideConfigSchema.optional(),
 })
 
 export const ClaudeCodeConfigSchema = z.object({
