@@ -21,3 +21,18 @@ export {
   PROMETHEUS_PLAN_TEMPLATE,
   PROMETHEUS_BEHAVIORAL_SUMMARY,
 } from "./prometheus"
+
+export {
+  PRD_SYSTEM_PROMPT,
+  PRD_PERMISSION,
+} from "./prd"
+
+export {
+  USERFLOW_SYSTEM_PROMPT,
+  USERFLOW_PERMISSION,
+} from "./userflow"
+
+export {
+  ERD_SYSTEM_PROMPT,
+  ERD_PERMISSION,
+} from "./erd"
