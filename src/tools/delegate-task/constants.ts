@@ -512,7 +512,7 @@ WHY THIS FORMAT IS MANDATORY:
  * List of agent names that should be treated as plan agents.
  * Case-insensitive matching is used.
  */
-export const PLAN_AGENT_NAMES = ["plan", "prometheus", "planner"]
+export const PLAN_AGENT_NAMES = ["plan", "prometheus", "planner", "prd", "userflow", "erd"]
 
 /**
  * Check if the given agent name is a plan agent.
